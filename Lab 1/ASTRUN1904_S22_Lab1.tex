@@ -1,0 +1,220 @@
+\documentclass[11pt]{article}
+\usepackage[includeheadfoot, top=1.0in, bottom=1.0in, hmargin=1.0in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{url}
+\pagestyle{fancy}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{cancel}
+
+\lhead{Astronomy Lab II}
+\rhead{Spring 2022}
+\lfoot{Mead}
+\rfoot{Mon 6-9pm}
+\cfoot{\thepage}
+
+\begin{document}
+
+\begin{center}
+\huge{Lab 1: Order of Magnitude and Units}\\ \medskip \Large{January 24, 2022}
+\\ \medskip \Large{\textcolor{red}{Answer Key}}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%% INTRODUCTION %%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction: An Astronomical Undertaking}
+
+The Earth has a mass of about 6 \emph{septillion} kilograms -- that's 6 followed by \emph{24} zeros. The Sun's mass is about 300,000 times that. And a typical galaxy weighs in at about 100 \emph{billion} Suns. Better yet, a large galaxy cluster can contain up to \emph{1,000} galaxies. That's a lot of mass.
+\\ \\ \noindent
+It's not a coincidence that, in colloquial English, the word ``astronomical'' is synonymous with ``\emph{very very large}.'' In astronomy, we study an extremely wide range of scales, from the tiniest electron to the largest cluster of galaxies. As such, we need some type of mathematical framework for dealing with very big (and very small) numbers -- this framework is called \textbf{scientific notation} (a remarkably generic name). 
+\\ \\ \noindent
+In this lab, you will learn how to carry out astronomical calculations using \emph{scientific notation}, how to properly represent astronomical measurements with \emph{units}, how to understand the vastness of the Universe in terms of \emph{orders of magnitude}, and how to use these tools in order to quickly estimate answers to the inevitable questions you will ask. This lab will provide you with the basic quantitative skills required to be an amateur astronomer.
+
+%%%%%%%%%%%%%%%%%%%%%%% OoM %%%%%%%%%%%%%%%%%%%%%%%
+\section{Scientific Notation and Orders of Magnitude}
+
+When writing big numbers -- like 340,000,000 -- or small numbers -- like 0.000034 -- writing out all the zeros can be cumbersome. Scientific notation alleviates this issue by representing numbers in terms of \textbf{powers of ten}. If we wish to write 100,000 (or 1 followed by 5 zeros) in a more compact way, we can do so by writing $10^5$ -- or ``10 to the fifth power.'' So, we could write 340,000,000 in scientific notation as $3.4 \times 10^8$ -- multiplication by ``10 to the eighth power'' shifts the decimal point in $3.4$ to the \emph{right} by 8 places. Similarly, we can use a \emph{negative} power of ten to shift the decimal place to the \emph{left}: $0.000034$ can be written as $3.4 \times 10^{-5}$, or ``3.4 times 10 to the negative fifth power.'' When a number is written in scientific notation, we refer to the leading number (e.g., 3.4 in the examples above) as the \textbf{coefficient} and the power of ten as the \textbf{order of magnitude}. For instance, $4.5 \times 10^{11}$ has a coefficient of 4.5 and an order of magnitude of 11; this number is 3 orders of magnitude \emph{greater} than $3.7 \times 10^8$, and 5 orders of magnitude \emph{less} than $1.11 \times 10^{16}$.
+\\ \\
+\noindent
+Scientists use the order of magnitude of a number when knowing the specific value of a number is not necessary or practical -- in particular, to facilitate easy comparisons between numbers.  If you want to know how the radius of the Sun compares to the radius of the Earth, it is often sufficient to know whether the Sun has a radius of 0.01, or 10, or 100, or 1,000,000 times the size of the Earth (\textbf{what do you think the answer is?}).  Throughout this course, you will be asked to calculate many numbers, and an important pre-calculation step is to estimate what order of magnitude your value should be.  If I asked you to calculate the height of Pupin and you got an answer on the order of 10 cm, you would immediately know that value was wrong.  Similarly, if you calculated the speed of a rocket to be 400,000 km/s, you should immediately know that you have erred (\textbf{why?}).
+\\ \\ \noindent
+\textbf{In your own words, describe what an order of magnitude is.} 
+\\ \\ \noindent
+When you write a number in scientific notation, the coefficient should always have only \emph{one} digit to the left of the decimal point; this standardizes the definition of ``order of magnitude'' and makes it easier to compare measurements expressed in scientific notation. If we can only have one digit to the left of the decimal point, how many digits can we have to the right of the decimal point? This is specified by the number of \textbf{significant figures} (or ``sig figs,'' if you're in a hurry).
+\\ \\ \noindent
+If we want to write a number with three significant figures, then we should have one digit to the left of the decimal and two to the right (for a total of three digits). Similarly, a number with only one significant figure will have only one digit to the left of the decimal and \emph{nothing} after the decimal. $3.4578 \times 10^9$ has five sig figs, while $3.5 \times 10^9$ has two sig figs and $3 \times 10^9$ only has one sig fig. It's important to keep significant figures in mind when reporting measurements, since your measuring tool may not be precise enough to justify many sig figs -- for example, if your ruler only has markings at each centimeter, it would be more proper to cite a measurement of 3.5 cm than to cite a measurement of 3.48825 cm (the ruler is definitely not precise enough to give you a measurement to six significant figures). Usually, keeping two or three significant figures is enough (and often more correct). \textbf{Write the following measurements correctly in scientific notation with the indicated number of significant figures, and state the order of magnitude:}
+
+\begin{enumerate}
+    \item \textbf{The Radius of the Earth} 6,371,000 m \textit{(4 sig figs)}
+    \item \textbf{Distance from the Earth to the Sun} 149,597,871 km \textit{(2 sig figs)}
+    \item \textbf{The Mass of the Sun} 1,989,000,000,000,000,000,000,000,000,000 kg \textit{(1 sig fig)}
+    \item \textbf{The Age of the Universe} $137 \times 10^{8}$ years \textit{(3 sig figs)}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%% UNITS %%%%%%%%%%%%%%%%%%%%%%%
+\section{Units}
+
+\subsection{Unit Conversion}
+Before we get to the fun stuff, we need to pause and review the super-important
+topic of units. Every number we will be dealing with represents something, and 
+most things should have a unit. You're not 5.2 tall, you're 5.2 \textit{feet} tall; class isn't 3 long, it's 3 \textit{hours} long. 
+\\ \\ \noindent
+To do any calculations, the units need to agree. 
+You can't add centimeters and meters until you convert them to the same units. 
+To convert units, it's best to multiply the value by a fraction that's equal to 1: $\frac{1 \,\mathrm{year}}{365 \,\mathrm{days}}$, $\frac{12 \,\mathrm{inches}}{1 \,\mathrm{foot}}$, etc. Below are some examples:
+\begin{itemize}
+    % \item Convert 8 feet to inches: $$ 8 \,\mathrm{feet} = 8 \,\cancel{\mathrm{feet}} \times \frac{12 \, \mathrm{inches}}{1 \,\cancel{\mathrm{foot}}} = 96 \, \mathrm{inches}.$$
+    \item Convert 1.881 years to hours: $$ 1.881 \, \mathrm{years} = 1.881 \, \cancel{\mathrm{years}} \times \frac{365 \, \cancel{\mathrm{days}}}{1 \, \cancel{\mathrm{year}}} \times \frac{24 \, \mathrm{hours}}{1 \, \cancel{\mathrm{day}}} =  16500 \, \mathrm{hours}. $$
+    \item Convert 1.48 inches per year to feet per decade: $$ 1.48 \, \frac{\mathrm{inches}}{\mathrm{year}} =  1.48 \, \frac{\cancel{\mathrm{inches}}}{\cancel{\mathrm{year}}} \times \frac{1 \, \mathrm{foot}}{12 \, \cancel{\mathrm{inches}}} \times \frac{10 \, \cancel{\mathrm{years}}}{1 \, \mathrm{decade}} = 1.23 \, \frac{\mathrm{feet}}{\mathrm{decade}}. $$
+\end{itemize}
+\noindent
+You should explicitly write out your unit conversion as above.  I recommend that you get into the habit of doing this always: keeping track of units will help you avoid mistakes and retain your sanity! \textbf{To practice, convert the following:}
+
+\begin{enumerate}
+    \item \textbf{Distance to Andromeda Galaxy} $7.7 \times 10^5$ pc $\rightarrow$ km
+    \item \textbf{Age of the Universe} 13.77 Gyrs $\rightarrow$ s
+    \item \textbf{Speed of Light} $3 \times 10^8 \, \mathrm{m/s} \rightarrow$ miles/hour (\textit{Hint:} There are 1609 meters per mile)
+\end{enumerate}
+
+\subsection{Math, Orders of Magnitude, and Units -- Oh My!}
+
+Let's review some quick rules about arithmetic with scientific notation and units:
+\begin{itemize}
+    \item When \textit{multiplying} two numbers in scientific notation, we \emph{multiply} the coefficients but \emph{add} the orders of magnitude. When multiplying units, the units also get multiplied together. For example:
+    $$(3.4 \times 10^9 \,\mathrm{km}) \times (5.8 \times 10^4 \,\mathrm{km}) = (3.4 \times 5.8) \times 10^{9 + 4} \,\mathrm{km^2}$$ $$= 19.72 \times 10^{13} \,\mathrm{km^2} = 1.972 \times 10^{14} \,\mathrm{km^2} = 2.0 \times 10^{14}\,\mathrm{km^2}$$
+    \textit{Note: the final answer is rounded to two significant figures -- usually, when doing arithmetic in scientific notation, it's proper to write your final answer using the \emph{least} number of sig figs that appear in the original numbers.}
+    
+    \item When \textit{dividing} two numbers in scientific notation, we \emph{divide} the coefficients but \emph{subtract} the orders of magnitude. When dividing units, you can cancel units if they are the \textit{same} unit. For example:
+    $$\frac{3.4 \times 10^9 \,\mathrm{km}}{5.8 \times 10^5 \,\mathrm{m}} = \frac{3.4 \times 10^9 \,\cancel{\mathrm{km}}}{5.8 \times 10^2 \,\cancel{\mathrm{km}}} = \frac{3.4}{5.8} \times 10^{9-2} = 0.586 \times 10^7 = 5.86 \times 10^6 = 5.9 \times 10^6$$
+    
+    \item When \textit{adding} or \textit{subtracting} two numbers in scientific notation, we simply add/subtract the coefficients. \textit{However}, we can only add or subtract these numbers if they're multiplied by the same power of 10 -- otherwise, we need to adjust the powers of 10 to match. When adding or subtracting numbers with units, you can only add/subtract the numbers if they have the same units.  You then maintain the same unit for your answer. For example:
+    $$(3.4 \times 10^9 \,\mathrm{s}) + (4.2 \times 10^8 \,\mathrm{s}) = (3.4 \times 10^9 \,\mathrm{s}) + (0.42 \times 10^9 \,\mathrm{s}) = 3.82 \times 10^9 \,\mathrm{s} = 3.8 \times 10^9 \,\mathrm{s}$$
+
+\end{itemize}
+\noindent
+Let's practice.  \textbf{Solve the following problems and express your answer in scientific notation with the proper number of significant figures:}
+
+\begin{enumerate}
+    \item Light travels at a speed of $1.8 \times 10^7$ kilometers per minute. The average distance from the Earth to the Sun is $1.5 \times 10^8$ kilometers. Find the time (in minutes) that it takes light to travel from the Sun to the Earth by \emph{dividing} the Earth-Sun distance by the speed of light. If the Sun were to suddenly stop emitting light, how long would it take us (on Earth) to notice? 
+    
+    \item Cosmic voids -- the emptiest regions in the Universe -- have densities lower than $8 \times 10^{-28}$ kilograms per cubic meter. Voids can also be extremely large -- taking the volume of a void to be $4 \times 10^{56}$ cubic meters, find the total amount of mass (in kilograms) contained in a typical void by multiplying the density by the volume. On Earth, the density of dry air at sea level is 1.2 kilograms per cubic meter. By how many orders of magnitude is the density of air greater than the density in cosmic voids?
+    
+    \item The speed at which the Earth orbits around the Sun depends on the \emph{sum} of the Earth's mass and the Sun's mass. The mass of the Earth is $5.972 \times 10^{24} \, {\rm kg}$ and the mass of the Sun is $1.989 \times 10^{30} \, {\rm kg}$. What is the total mass of the Earth-Sun system?. Does the mass of the Earth play a significant role in determining the Earth's orbital speed around the Sun?
+\end{enumerate}
+
+\noindent
+We can also compare the size of one value to another by taking the \textit{ratio}.  If someone is twice as old as you, we say they are ``two times'' older, because if your age is 20 years and your friend's age is 40 years, the ratio of your ages is $\frac{40 \,\mathrm{years}}{20 \,\mathrm{years}}$ = 2. Note that the ratio is unitless because the units cancel.
+\\ \\ \noindent
+We can do this quicker and easier by using orders of magnitude. OoM are great for making (rough) comparisons. The Sun is about $10^6$ times larger than the Earth, or six orders of magnitude larger.  Saying ``New York City has a population an order of magnitude greater than North Dakota" means ``New York City's population is about $10^1$ times the population of North Dakota". 
+\\ \\ \noindent
+To calculate the order of magnitude difference between thing A and thing B, you subtract their orders of magnitude (OOM). For example, the Sun has a mass of order $10^{30}\,\mathrm{kg}$ and Earth has a mass of order $10^{24}\,\mathrm{kg}$, so the order of magnitude difference is $30 - 24$, or $6$ orders of magnitude.
+\\ \\ \noindent
+\textbf{What are the OoM differences for the following:}
+\begin{enumerate}
+    \item The Sun's radius and Earth's radius?
+    \item Earth's distance from the Sun and the distance to the nearest star (4 ly)? The distance from Earth to the Sun is called an Astronomical Unit (AU).
+    \item Your age and the age of the Universe (13.7 Gyrs)?
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%% SCALING THE UNIVERSE %%%%%%%%%%%%%%%%%%%%%%%
+\section{Scaling the Universe}
+
+\subsection{Setting the Scale}
+
+Now we'll set up a scale model of the solar system with the Sun the size of the ballpoint on a pen (1 mm).
+
+\begin{enumerate}
+    \item What is the radius of the Sun in km?
+    \item Now set up the scale factor, $F$.  A ballpoint pen is $F$ times SMALLER than the Sun, or $$R_{point} = F \times R_\odot$$  (Don't forget to convert your units!)
+    \item On this scale, what's the distance between Earth and the Sun?
+    \item Scale the following distances by your scale factor, $F$.
+    \begin{enumerate}
+        \item The distance from the Sun to Jupiter (5.2 AU)
+        \item The distance to the edge of the Solar System (100,000 AU)
+        \item The distance to the nearest star (4 ly)
+        \item The distance to the center of the Milky Way (8 kiloparsecs)
+        \item The distance to the Andromeda Galaxy (0.89 megaparsecs)
+        \item The distance to the edge of the observable Universe ($93\times 10^9$ ly)
+    \end{enumerate}
+    \item \textit{Bonus:} What are some real world distances that you can compare each scaled quantity to (e.g. the length of Manhattan, the distance from New York City to Los Angeles, the circumference of the Earth)?
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%% ESTIMATIONS %%%%%%%%%%%%%%%%%%%%%%%
+\section{Estimation Techniques (Time Permitting)}
+
+\subsection{Fermi Estimation}
+{\it Fermi problems} are a specific class of order of magnitude estimation for which it would be challenging to actually find the correct answers. Fermi estimation simply involves making \textit{rough} estimates for the quantities that are relevant to your problem, and using these to get an order of magnitude estimate for the solution. In your groups, spend some time answering the following questions without a calculator or the internet. \textit{Show your work and be explicit about your assumptions.} Don't worry about your estimations being exactly right.
+\begin{enumerate}
+    \item In an act of rebellion against your poor lab instructor, you declare scientific notation to be useless and decide to write out $10^{\rm one \, billion}$ (that's 1 followed by one \emph{billion} zeros) in its entirety. Assuming you're using a standard word processor with 12 pt font and 1 inch margins, estimate how many sheets of $8.5'' \times 11''$ paper you'd need to fully write out $10^{\rm one \, billion}$. Give your answer to one significant figure. If you placed all these sheets of paper in a single stack, approximately how tall (in meters, to one significant figure) would that stack be?
+    
+    \item The main Columbia campus extends from 114th street to 120th street, between Broadway and Amsterdam Avenue. Assuming there are no buildings or other obstructions in this rectangle, approximately how many people could fit into Columbia's main campus (without needing to stack people on top of one other)?
+    
+    \item Come up with and solve your own Fermi Problem!
+    
+\end{enumerate}
+
+\subsection{Dimensional Analysis}
+Units can be really useful in helping scientists figure out how to calculate values. \textit{Dimensional analysis} is a technique that uses units, or dimensions, to find the form of an equation, or more often, as a method to roughly calculate an answer as a kind of sanity check.  Here are some dimensions and examples of their units:
+\\
+\begin{center}
+    \begin{tabular}{c | c} 
+    Dimension & Units \\
+    \hline
+    Length [L] & meters, AU, parsecs, light years\\
+    Mass [M] & kilograms, $M_\odot$\\
+    Time [T] & seconds, years, Gyrs
+    \end{tabular}
+\end{center}
+\noindent
+Units are just specific values for dimensions.  We can cite velocities in meters per second, or to generalize, we can say a velocity is a length per time, or [L]/[T].  Acceleration can be written in $\mathrm{m/s^2}$ or as [L]/[T]$^2$.
+\\ \\ \noindent
+Say I wanted to derive the formula for the gravitational acceleration I might feel from some object (e.g. - g$_{Earth} = 9.81 \, \mathrm{m/s^2}$).  You might imagine some of the important quantities are the mass of the object, and how distant we are from the object.  Since we are dealing with gravity, we should also probably include Newton's gravitational constant, G.  We can now make the assumption that the gravitational acceleration is proportional to each of these quantities in some way.  We can write this as:
+$$\mathrm{g} \propto m^\alpha \times r^\beta \times G^\gamma$$ where $\alpha, \, \beta, \, \mathrm{and} \, \gamma$ are the exponents to which each quantity is taken in our equation.  We want to solve for these.  [\textit{Note that I wrote g is ``proportional to" the right hand side of the equation.  This is because dimensional analysis \textbf{does not} help us to solve for coefficients.  It is simply an order of magnitude estimate of the form of our equation.}] Now, we know the dimensions for each of these quantities, so we can rewrite our equation as:
+$$\mathrm{\frac{[L]}{[T]^2}} \propto \mathrm{[M]^\alpha} \times \mathrm{[L]^\beta} \times \mathrm{\frac{[L]^{3\gamma}}{[M]^\gamma*[T]^{2\gamma}}}$$
+Because the left hand side must equal the right hand side of the equation, we can solve for $\alpha, \, \beta, \, \mathrm{and} \, \gamma$ using a system of equations.  This is made easier if you recall that $x^a \times x^b = x^{a+b}$.  Therefore, if we have $x^c = x^a \times x^b = x^{a+b}$, then $c = a+b$.  Using this, we can gather all of our individual dimensions together.
+\\ \\ \noindent
+Starting with mass [M], we see that there is no mass on the left hand side of the equation.  This is equivalent to [M]$^0$.  On the right hand side, we have [M]$^\alpha$ and [M]$^{-\gamma}$.  So our equation for [M] is [M]$^0$ = [M]$^\alpha \times$ [M]$^{-\gamma}$, or:
+\begin{equation}
+    0 = \alpha -\gamma
+\end{equation}
+Similarly for [L], we have [L]$^1$ = [L]$^\beta \times$ [L]$^{3\gamma}$, or:
+\begin{equation}
+    1 = \beta + 3\gamma
+\end{equation}
+And for [T], we have [T]$^{-2}$ = [T]$^{-2\gamma}$, or:
+\begin{equation}
+    -2 = -2\gamma
+\end{equation}
+Solving equations (1), (2), and (3) will give us our $\alpha, \, \beta, \, \mathrm{and} \, \gamma$.  From (3), we see that $\gamma$ = 1.  Plugging this into (1), we have that $\alpha$ = 1. From (2), we find that $\beta$ = -2.  Now that we have $\alpha, \, \beta, \, \mathrm{and} \, \gamma$, our equation for the gravitational acceleration is:
+$$\mathrm{g} = m^1 \times r^{-2} \times G^1$$
+This is correct! The formula for gravitational acceleration is $g = \frac{GM}{R^2}$!  If we plug our dimensions back in, we see that both the left and right hand sides give us dimensions of $\frac{[L]}{[T]^2}$.
+\\ \\ \noindent
+Now it is your turn.  \textbf{Find an equation for the period of a plant orbiting a star (the period is how long it takes the planet to complete one orbit).} \textit{(This is a challenge and not graded for correctness.)}
+\begin{itemize}
+    \item What are the important quantities? (\textit{Hint:} The mass of the planet is not important as it is much smaller than the star!)
+    \item What are the dimensions of each of your important quantities?
+    \item Set up your equation.
+    \item Solve your system of equations (show your work!)
+    \item Do a sanity check. If you plug your exponents back into your equation, do the dimensions match on both sides?
+\end{itemize}
+\textit{Hint:} the correct equation for the period of a planet orbiting a star is $P^2 = \frac{4\pi^2 r^3}{GM}$ but note you will not get the factor of $4\pi^2$ from your calculation.
+\\ \\ \noindent
+\textbf{Using the equation you found, what is the period of Earth's orbit around the Sun? What is the order of magnitude difference between this and the actual duration of Earth's orbit?}
+
+%%%%%%%%%%%%%%%%%%%%%%% CONCLUSIONS %%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+Complete this section by yourself.
+\begin{enumerate}
+    \item Why is it useful for scientists to use scientific notation and orders of magnitude when describing things in the universe?
+    \item When is the order of magnitude enough? When is it not? Give examples and explain why.
+    \item How should you decide what units to report a number in?
+    \item \textit{(Graded for completion)} Here is a fun thought experiment: The age of the Universe is 13.7 billion years old. But we've said in this lab that the edge of the \textit{observable} Universe is 93 billion light years away. Since light travels at a finite speed, how can this be true?
+    \item If the lab was perfectly clear to you, what did you like or dislike? If not, what confused you? Any other feedback?
+\end{enumerate}
+
+\end{document}
+
